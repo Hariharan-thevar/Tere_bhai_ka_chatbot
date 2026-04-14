@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">
+          <span class="brand-icon">◈</span>
+          <span class="brand-name">Orion AI</span>
+        </div>
+        <button class="new-chat-btn" id="newChatBtn" title="New Chat">＋ New Chat</button>
+      </div>
+
+      <div class="conv-list" id="convList">
+        <p class="conv-empty">No conversations yet.</p>
+      </div>
+
+      <div class="sidebar-footer">
+        <span>Powered by Claude</span>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Top bar -->
+      <header class="topbar">
+        <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        <span class="topbar-title" id="topbarTitle">Orion AI</span>
+      </header>
+
+      <!-- Messages -->
+      <section class="messages" id="messages">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon">◈</div>
+          <h1>How can I help you today?</h1>
+          <p>Ask me anything — I'm here to assist.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-text="Explain quantum computing in simple terms">⚛ Explain quantum computing</button>
+            <button class="suggestion" data-text="Write a Python function to sort a list of dictionaries by a key">🐍 Python code snippet</button>
+            <button class="suggestion" data-text="Give me 5 productivity tips for deep work">💡 Productivity tips</button>
+            <button class="suggestion" data-text="Summarize the history of the internet">🌐 History of the internet</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Input area -->
+      <footer class="input-area">
+        <div class="input-wrap">
+          <textarea
+            id="messageInput"
+            placeholder="Message Orion AI…"
+            rows="1"
+            autocomplete="off"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <p class="input-hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
