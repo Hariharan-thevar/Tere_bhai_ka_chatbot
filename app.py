@@ -118,7 +118,7 @@ def create_app():
 
         try:
             response = gemini_client.models.generate_content(
-                model="gemini-2.0-flash",
+                model="gemini-1.5-flash-8b",
                 contents=contents,
                 config=types.GenerateContentConfig(
                     system_instruction=SYSTEM_PROMPT,
